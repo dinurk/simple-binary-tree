@@ -9,7 +9,7 @@ public class SimpleBinaryTreeNodeTest {
 
     @Test
     @DisplayName("get value test")
-    void valueGetting() {
+    void getValue() {
         BinaryTreeNode<Integer> node = new SimpleBinaryTreeNode<>(1);
         assertEquals(1, node.value());
     }
@@ -40,8 +40,8 @@ public class SimpleBinaryTreeNodeTest {
     }
 
     @Test
-    @DisplayName("left and right subtree value test")
-    void leftAndRightSubtreeValue() {
+    @DisplayName("left and right subtree value get test")
+    void leftAndRightSubtreeValueGet() {
         Object value = new Object();
         Object leftValue = new Object();
         Object rightValue = new Object();

@@ -13,8 +13,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class LevelOrderBinaryTreeIteratorTest {
 
     @Test
-    @DisplayName("level order binary tree iterator test")
-    void next() {
+    @DisplayName("level order binary tree iteration test")
+    void levelOrderBinaryTreeIteration() {
         BinaryTreeNode<Integer> root = new SimpleBinaryTreeNode<>(1);
 
         // level 1
