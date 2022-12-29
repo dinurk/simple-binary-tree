@@ -11,11 +11,17 @@ public class SimpleBinaryTreeNode<T> implements BinaryTreeNode<T> {
 
     @Override
     public BinaryTreeNode<T> right() {
+        if(right == null) {
+            return null;
+        }
         return right.copy();
     }
 
     @Override
     public BinaryTreeNode<T> left() {
+        if(left == null) {
+            return null;
+        }
         return left.copy();
     }
 
