@@ -9,34 +9,34 @@ import java.util.Queue;
 
 public class LevelOrderBinaryTreeIterator<T> implements Iterator<T> {
 
-    private final Queue<BinaryTreeNode<T>> levelOrderTraversalStack;
+    private final Queue<BinaryTreeNode<T>> levelOrderTraversalQueue;
 
     public LevelOrderBinaryTreeIterator(BinaryTreeNode<T> root) {
-        levelOrderTraversalStack = new LinkedList<>();
+        levelOrderTraversalQueue = new LinkedList<>();
         if(root != null) {
-            levelOrderTraversalStack.add(root);
+            levelOrderTraversalQueue.add(root);
         }
     }
 
     @Override
     public boolean hasNext() {
-        return !levelOrderTraversalStack.isEmpty();
+        return !levelOrderTraversalQueue.isEmpty();
     }
 
     @Override
     public T next() {
 
-        if(levelOrderTraversalStack.isEmpty()) {
+        if(levelOrderTraversalQueue.isEmpty()) {
             throw new NoSuchElementException("requested element does not exist");
         }
 
-        BinaryTreeNode<T> nodeWithResult = levelOrderTraversalStack.poll();
+        BinaryTreeNode<T> nodeWithResult = levelOrderTraversalQueue.poll();
 
         if(nodeWithResult.hasLeft()) {
-           levelOrderTraversalStack.add(nodeWithResult.left());
+            levelOrderTraversalQueue.add(nodeWithResult.left());
         }
         if(nodeWithResult.hasRight()) {
-            levelOrderTraversalStack.add(nodeWithResult.right());
+            levelOrderTraversalQueue.add(nodeWithResult.right());
         }
 
         return nodeWithResult.value();
