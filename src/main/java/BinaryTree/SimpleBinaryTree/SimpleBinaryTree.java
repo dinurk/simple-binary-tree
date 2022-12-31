@@ -1,6 +1,7 @@
-package BinaryTree.BinaryTree;
+package BinaryTree.SimpleBinaryTree;
 
-import BinaryTree.BinaryTreeNode.BinaryTreeNode;
+import BinaryTree.Abstract.BinaryTree;
+import BinaryTree.Abstract.BinaryTreeNode;
 import BinaryTree.BinaryTreeNode.SimpleBinaryTreeNode;
 import BinaryTree.Iterator.LevelOrderBinaryTreeIterator;
 

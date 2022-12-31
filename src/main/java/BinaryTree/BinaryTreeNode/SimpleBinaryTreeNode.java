@@ -1,9 +1,11 @@
 package BinaryTree.BinaryTreeNode;
 
+import BinaryTree.Abstract.BinaryTreeNode;
+
 public class SimpleBinaryTreeNode<T> implements BinaryTreeNode<T> {
 
     private final T value;
-    private BinaryTreeNodePrototype<T> left, right;
+    private BinaryTreeNode<T> left, right;
 
     public SimpleBinaryTreeNode(T value){
         this.value = value;
@@ -11,18 +13,12 @@ public class SimpleBinaryTreeNode<T> implements BinaryTreeNode<T> {
 
     @Override
     public BinaryTreeNode<T> right() {
-        if(right == null) {
-            return null;
-        }
-        return right.copy();
+        return right;
     }
 
     @Override
     public BinaryTreeNode<T> left() {
-        if(left == null) {
-            return null;
-        }
-        return left.copy();
+        return left;
     }
 
     @Override
@@ -48,13 +44,5 @@ public class SimpleBinaryTreeNode<T> implements BinaryTreeNode<T> {
     @Override
     public T value() {
         return value;
-    }
-
-    @Override
-    public BinaryTreeNode<T> copy() {
-        SimpleBinaryTreeNode<T> node = new SimpleBinaryTreeNode<>(value);
-        node.left = left;
-        node.right = right;
-        return node;
     }
 }

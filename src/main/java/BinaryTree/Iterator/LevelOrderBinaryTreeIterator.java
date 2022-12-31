@@ -1,6 +1,6 @@
 package BinaryTree.Iterator;
 
-import BinaryTree.BinaryTreeNode.BinaryTreeNode;
+import BinaryTree.Abstract.BinaryTreeNode;
 
 import java.util.Iterator;
 import java.util.LinkedList;

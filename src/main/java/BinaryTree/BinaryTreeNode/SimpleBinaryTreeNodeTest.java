@@ -1,5 +1,6 @@
 package BinaryTree.BinaryTreeNode;
 
+import BinaryTree.Abstract.BinaryTreeNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,24 +20,21 @@ public class SimpleBinaryTreeNodeTest {
     void leftAndRightSubtreeDefaultValue() {
         BinaryTreeNode<Integer> node = new SimpleBinaryTreeNode<>(1);
 
-        // by default left and right nodes are null
         assertNull(node.left());
         assertNull(node.right());
     }
 
     @Test
-    @DisplayName("left and right subtree copy test")
-    void leftAndRightSubtreeCopy() {
+    @DisplayName("left and right subtree get test")
+    void leftAndRightSubtreeGet() {
         BinaryTreeNode<Integer> node = new SimpleBinaryTreeNode<>(1);
         BinaryTreeNode<Integer> left = new SimpleBinaryTreeNode<>(2);
         BinaryTreeNode<Integer> right = new SimpleBinaryTreeNode<>(3);
         node.alterLeft(left);
         node.alterRight(right);
 
-        // left and right nodes will be copied (prototype pattern)
-        // in order to save tree structure
-        assertNotEquals(left, node.left());
-        assertNotEquals(right, node.right());
+        assertEquals(left, node.left());
+        assertEquals(right, node.right());
     }
 
     @Test
@@ -52,7 +50,6 @@ public class SimpleBinaryTreeNodeTest {
         node.alterLeft(left);
         node.alterRight(right);
 
-        // values contained in left and right nodes won't be copied
         assertEquals(left.value(), node.left().value());
         assertEquals(right.value(), node.right().value());
     }

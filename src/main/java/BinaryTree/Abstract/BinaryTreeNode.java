@@ -1,6 +1,6 @@
-package BinaryTree.BinaryTreeNode;
+package BinaryTree.Abstract;
 
-public interface BinaryTreeNode<T> extends BinaryTreeNodePrototype<T> {
+public interface BinaryTreeNode<T> {
     BinaryTreeNode<T> right();
     BinaryTreeNode<T> left();
     void alterLeft(BinaryTreeNode<T> node);

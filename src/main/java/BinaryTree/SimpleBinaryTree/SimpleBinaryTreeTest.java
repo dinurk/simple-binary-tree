@@ -1,5 +1,6 @@
-package BinaryTree.BinaryTree;
+package BinaryTree.SimpleBinaryTree;
 
+import BinaryTree.Abstract.BinaryTree;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
